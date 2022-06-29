@@ -94,10 +94,10 @@ bool check_win(int board[3][3], char symbol) {
 
     // Check diagnoal wins
 
-    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2]) {
+    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) {
         return true;
     }
-    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0]) {
+    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol) {
         return true;
     }
 
@@ -138,7 +138,7 @@ void print_title() {
 }
 
 void print_board(int board[3][3]) {
-    printf("  S  0   1   2\n");
+    printf("    0   1   2\n");
     for (int i = 0; i < 3; i++) {
         printf("%d ", i);
         for (int j = 0; j < 3; j++) {
