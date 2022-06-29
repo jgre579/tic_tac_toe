@@ -9,7 +9,9 @@
 #define X 88
 #define O 79
 
+/* Function prototypes */
 void print_board(int board[3][3]);
+void print_title();
 
 int main(int argc, char const *argv[]) {
     /* code */
@@ -20,15 +22,28 @@ int main(int argc, char const *argv[]) {
         {O,O,O}
 
     };
+    print_title();
     print_board(board);
+    
+
+    char input;
+
+    
+    do {
+        printf("\nEnter 'S' to begin... ");
+        scanf(" %c", &input);
+    }
+    while (input != 83);
+
+
 
     return 0;
 }
 
 void print_title() {
-
-    printf("Welcome to TicTacToe: The C Edition");
-
+    printf("------------------------------------------------\n");
+    printf("Welcome to TicTacToe: The C Edition\n");
+    printf("------------------------------------------------\n");
 }
 
 void print_board(int board[3][3]) {
