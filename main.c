@@ -28,6 +28,7 @@ int main(int argc, char const *argv[]) {
     
     print_title();
     print_board(board);
+   
     
 
     char input;
@@ -39,6 +40,9 @@ int main(int argc, char const *argv[]) {
     }
     while (input != 83);
     is_running = true;
+    
+    clear_board(board);
+    print_board(board);
 
     // Game Loop
     while (is_running) {
@@ -47,13 +51,14 @@ int main(int argc, char const *argv[]) {
         get_move(X, board);
         print_board(board);
         // Process move
+       
+        // Check win 
         if (check_win(board, X)) {
             is_running = false;
             printf("\nPlayer X Wins!");
             break;
 
         }
-        // Check win 
 
         // Repeat for player 2. 
         is_running = true;
@@ -83,6 +88,8 @@ bool check_win(int board[3][3], char symbol) {
         return true;
     }
 
+
+    return false;
 
 }
 
@@ -128,4 +135,15 @@ void print_board(int board[3][3]) {
     }
     
     
+}
+
+void clear_board(int board[3][3]) {
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            board[i][j] = SPACE;
+        }
+
+    }
+
 }
