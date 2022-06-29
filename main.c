@@ -110,7 +110,7 @@ void get_move(char symbol, int board[3][3]) {
 
     int x, y;
 
-    printf("\nPlayer %c: Enter the coordinates of your next mode\n", symbol);
+    printf("\nPlayer %c: Enter the coordinates of your next move\n", symbol);
 
     while (true) {
         scanf(" %d %d", &x, &y);
