@@ -40,7 +40,7 @@ int main(int argc, char const *argv[]) {
     }
     while (input != 83);
     is_running = true;
-    
+    char current_player = X;
     clear_board(board);
     print_board(board);
 
@@ -48,16 +48,29 @@ int main(int argc, char const *argv[]) {
     while (is_running) {
 
         // Get player 1 input
-        get_move(X, board);
+        get_move(current_player, board);
         print_board(board);
         // Process move
        
         // Check win 
-        if (check_win(board, X)) {
+        if (check_win(board, current_player)) {
             is_running = false;
-            printf("\nPlayer X Wins!");
+            printf("\nPlayer %c Wins!", current_player);
             break;
 
+        }
+
+        switch (current_player) {
+        case X:
+            current_player = O;
+            break;
+        case O:
+            current_player = X;
+            break;
+        
+        default:
+            current_player = X;
+            break;
         }
 
         // Repeat for player 2. 
@@ -125,9 +138,11 @@ void print_title() {
 }
 
 void print_board(int board[3][3]) {
-    
+    printf("  S  0   1   2\n");
     for (int i = 0; i < 3; i++) {
+        printf("%d ", i);
         for (int j = 0; j < 3; j++) {
+            
             printf("| %c ", board[i][j]);
         }
         printf("| \n");
