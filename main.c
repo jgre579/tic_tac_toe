@@ -13,6 +13,7 @@
 void print_board(int board[3][3]);
 void print_title();
 void get_move(char symbol, int board[3][3]);
+bool check_win(int board[3][3], char symbol);
 
 
 int main(int argc, char const *argv[]) {
@@ -46,7 +47,12 @@ int main(int argc, char const *argv[]) {
         get_move(X, board);
         print_board(board);
         // Process move
-        
+        if (check_win(board, X)) {
+            is_running = false;
+            printf("\nPlayer X Wins!");
+            break;
+
+        }
         // Check win 
 
         // Repeat for player 2. 
@@ -56,7 +62,29 @@ int main(int argc, char const *argv[]) {
     return 0;
 }
 
+bool check_win(int board[3][3], char symbol) {
+    // Check horizontal and vertical wins 
+    for (int i = 0; i < 3; i++) {
+        if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) {
+            return true;
+        }
 
+        if (board[0][i] == symbol && board[1][i] == symbol && board[2][i] == symbol) {
+            return true;
+        }
+    }
+
+    // Check diagnoal wins
+
+    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2]) {
+        return true;
+    }
+    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0]) {
+        return true;
+    }
+
+
+}
 
 void get_move(char symbol, int board[3][3]) {
 
