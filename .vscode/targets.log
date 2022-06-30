@@ -1,6 +1,4 @@
 make.exe all -f C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for Windows32
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 30 13:29:45 2022
+# Make data base, printed on Thu Jun 30 15:54:42 2022
 
 # Variables
 
@@ -25,27 +23,30 @@ USERPROFILE = C:\Users\Jorda
 # environment
 LOCALAPPDATA = C:\Users\Jorda\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ccc3123f-6f2c-4f64-a63a-a65996f3146d-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-f674ecb0-a470-42eb-a01b-5917211be39e-sock
 # environment
 VSCODE_CWD = C:\Users\Jorda\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
 SYSTEMROOT = C:\WINDOWS
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 3)
+LIBS = -lm
 # environment
 PROCESSOR_LEVEL = 6
 # environment
 PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
-# environment
+# e 
+nvironment
 UGII_3DCONNEXION_DIR32 = C:\Program Files\3Dconnexion\3DxWare\3DxNX64\ugii_dir32\
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
 JUNIT_HOME = C:\JUnit
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10868_UHCXSZMGRJURKLQN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_29936_JIVWAHLMMDOJJUXB
 # environment
 UGII_3DCONNEXION_DIR = C:\Program Files\3Dconnexion\3DxWare\3DxNX64\ugii_dir\
 # environment
@@ -103,7 +104,7 @@ MAKEFILE_LIST := C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 10868
+VSCODE_PID = 29936
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -128,6 +129,8 @@ CLASSPATH = C:\JUnit\junit-4.12.jar;.;
 HOMEPATH = \Users\Jorda
 # default
 MAKECMDGOALS := all
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 13)
+HEADERS = $(wildcard *.h)
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
@@ -172,6 +175,8 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW
 +F = $(notdir $+)
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 12)
+OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
 # environment
 USERDOMAIN = DESKTOP-UB2617K
 # 'override' directive
@@ -179,7 +184,7 @@ GNUMAKEFLAGS :=
 # environment
 OS = Windows_NT
 # makefile
-.DEFAULT_GOAL := link
+.DEFAULT_GOAL := default
 # default
 MAKE_VERSION := 4.3
 # environment
@@ -196,6 +201,8 @@ QUARTUS_ROOTDIR = C:\altera\13.0\quartus
 SOPC_KIT_NIOS2 = C:\altera\13.0\nios2eds
 # environment
 APPDATA = C:\Users\Jorda\AppData\Roaming
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 5)
+CFLAGS = -g -Wall
 # environment
 HOMEDRIVE = C:
 # environment
@@ -218,18 +225,22 @@ VSCODE_IPC_HOOK = \\.\pipe\de27c829d7325fdbf7d527a7f2b02295-1.68.1-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 2)
+TARGET = prog
 # environment
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 9e0a
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 4)
+CC = gcc
 # environment
 LXKSERVER = licensing-as.labcenter.com:8884/pcls/UniversityAuckland/
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=10/135=7%
+# Load=114/1024=11%, Rehash=0, Collisions=14/153=9%
 
 # Pattern-specific Variable Values
 
@@ -237,28 +248,101 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
+# . (key c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe, mtime 1656561207): 18 files, no impossibilities.
 
-# No files, no impossibilities in 0 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+%.o: %.c ai_player.h game_board.h
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 16):
+	$(CC) $(CFLAGS) -c $< -o $@
 
+# 1 implicit rules, 0 (0.0%) terminal.
 # Files
 
-ai_player.o:
+prog: ai_player.o game_board.o main.o
+#  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 11):
-	gcc -c ai_player.c
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := prog
+# automatic
+# * := 
+# automatic
+# < := ai_player.o
+# automatic
+# + := ai_player.o game_board.o main.o
+# automatic
+# % := 
+# automatic
+# ^ := ai_player.o game_board.o main.o
+# automatic
+# ? := ai_player.o game_board.o main.o
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=5/15=33%
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 21):
+	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
-clear:
+default: prog
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+# Not a target:
+ai_player.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 13:03:24
+#  File has been updated.
+#  Successfully updated.
+
+. 
+PRECIOUS: prog ai_player.o game_board.o main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 14):
-	rm -f ai_player.o game_board.o main.o programName //this one is to delete files faster
+
+# Not a target:
+ai_player.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 13:01:14
+#  File has been updated.
+#  Successfully updated.
+
+ai_player.o: ai_player.c ai_player.h game_board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ai_player'
+#  Last modified 2022-06-30 15:53:22
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 16):
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 24):
+	-rm -f *.o
+	-rm -f $(TARGET)
+
+# Not a target:
+game_board.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 14:19:30
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -266,56 +350,82 @@ clear:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-all:
+all: default
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 
-link: ai_player.o game_board.o main.o
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 15:47:20
+#  File has been updated.
+#  Successfully updated.
+
+main.o: main.c ai_player.h game_board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-06-30 15:53:26
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 16):
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Not a target:
+game_board.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 13:54:32
+#  File has been updated.
+#  Successfully updated.
+
+game_board.o: game_board.c ai_player.h game_board.h
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'game_board'
+#  Last modified 2022-06-30 15:53:24
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 16):
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Not a target:
+.SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 2):
-	gcc ai_player.o game_board.o main.o -o programName
 
-main.o:
+.PHONY: default all clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 5):
-	gcc -c main.c
 
-game_board.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 8):
-	gcc -c game_board.c
-
-# Not a t 
-arget:
+# Not a target:
 C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-30 13:25:34
+#  Last modified 2022-06-30 15:54:35
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/65=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 10 / storage = 131 B / avg = 13 B
-# current buf: size = 8174 B / used = 131 B / count = 10 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 326 B / avg = 10 B
+# current buf: size = 8174 B / used = 326 B / count = 32 / avg = 10 B
 
-# strcache performance: lookups = 20 / hit rate = 50%
+# strcache performance: lookups = 76 / hit rate = 57%
 # hash-table stats:
-# Load=10/8192=0%, Rehash=0, Collisions=0/20=0%
-# Finished Make data base on Thu Jun 30 13:29:45 2022
+# Load=32/8192=0%, Rehash=0, Collisions=0/76=0%
+# Finished Make data base on Thu Jun 30 15:54:42 2022
 
  

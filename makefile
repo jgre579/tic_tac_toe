@@ -1,14 +1,25 @@
-link: ai_player.o game_board.o main.o 
-	gcc ai_player.o game_board.o main.o -o programName
+#https://stackoverflow.com/questions/1484817/how-do-i-make-a-simple-makefile-for-gcc-on-linux
+TARGET = prog
+LIBS = -lm
+CC = gcc
+CFLAGS = -g -Wall
 
-main.o:
-	gcc -c main.c
+.PHONY: default all clean
 
-game_board.o: 
-	gcc -c game_board.c
+default: $(TARGET)
+all: default
 
-ai_player.o: 
-	gcc -c ai_player.c
+OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
+HEADERS = $(wildcard *.h)
 
-clear:
-	rm -f ai_player.o game_board.o main.o programName //this one is to delete files faster
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PRECIOUS: $(TARGET) $(OBJECTS)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
+
+clean:
+	-rm -f *.o
+	-rm -f $(TARGET)

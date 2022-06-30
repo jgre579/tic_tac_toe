@@ -51,3 +51,25 @@ void board_clear(int board[3][3]) {
     }
 
 }
+
+int board_num_free_spaces(int board[3][3]) {
+    int num = 0;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[i][j] == SPACE) {
+                num++;
+            };
+        }
+
+    }
+
+    return num;
+
+}
+
+void board_free_spaces(int board[3][3]) {
+
+
+   
+
+}

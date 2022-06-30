@@ -11,6 +11,7 @@
 bool board_check_win(int board[3][3], char symbol);
 void board_print(int board[3][3]);
 void board_clear(int board[3][3]);
+int board_num_free_spaces(int board[3][3]);
 
 
 #endif /* board */

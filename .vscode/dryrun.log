@@ -1,5 +1,6 @@
 make.exe link -f C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile --dry-run --keep-going --print-directory
 make: Entering directory 'c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe'
-gcc ai_player.o game_board.o main.o -o programName
 make: Leaving directory 'c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe'
  
+make: *** No rule to make target 'link'.
+
