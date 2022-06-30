@@ -1,6 +1,5 @@
-make.exe --dry-run --always-make --keep-going --print-directory
+make.exe link -f C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile --dry-run --keep-going --print-directory
 make: Entering directory 'c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe'
+gcc ai_player.o game_board.o main.o -o programName
 make: Leaving directory 'c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe'
  
-make: *** No targets specified and no makefile found.  Stop.
-

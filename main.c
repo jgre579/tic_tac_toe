@@ -1,19 +1,19 @@
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
-#define SPACE 32
-#define X 88
-#define O 79
+#include "ai_player.h"
+#include "game_board.h"
+
+
 
 /* Function prototypes */
-void print_board(int board[3][3]);
+void board_print(int board[3][3]);
 void print_title();
 void get_move(char symbol, int board[3][3]);
-bool check_win(int board[3][3], char symbol);
+bool game_turn(char current_player, int board[3][3]);
 
 
 int main(int argc, char const *argv[]) {
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[]) {
     };
     
     print_title();
-    print_board(board);
+    board_print(board);
    
     
 
@@ -41,68 +41,35 @@ int main(int argc, char const *argv[]) {
     while (input != 83);
     is_running = true;
     char current_player = X;
-    clear_board(board);
-    print_board(board);
+    board_clear(board);
+    board_print(board);
 
     // Game Loop
     while (is_running) {
 
-        // Get player 1 input
-        get_move(current_player, board);
-        print_board(board);
-        // Process move
-       
-        // Check win 
-        if (check_win(board, current_player)) {
-            is_running = false;
-            printf("\nPlayer %c Wins!", current_player);
-            break;
-
-        }
-
-        switch (current_player) {
-        case X:
-            current_player = O;
-            break;
-        case O:
-            current_player = X;
-            break;
+        is_running = game_turn(X, board);
+        is_running = game_turn(O, board);
         
-        default:
-            current_player = X;
-            break;
-        }
-
-        // Repeat for player 2. 
-        is_running = true;
     }
 
     return 0;
 }
 
-bool check_win(int board[3][3], char symbol) {
-    // Check horizontal and vertical wins 
-    for (int i = 0; i < 3; i++) {
-        if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) {
-            return true;
+bool game_turn(char current_player, int board[3][3]) {
+
+        // Get player 1 input
+        get_move(current_player, board);
+        board_print(board);
+        // Process move
+       
+        // Check win 
+        if (board_check_win(board, current_player)) {
+            printf("\nPlayer %c Wins!", current_player);
+            return false;
+
         }
 
-        if (board[0][i] == symbol && board[1][i] == symbol && board[2][i] == symbol) {
-            return true;
-        }
-    }
-
-    // Check diagnoal wins
-
-    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) {
-        return true;
-    }
-    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol) {
-        return true;
-    }
-
-
-    return false;
+        return true;       
 
 }
 
@@ -137,28 +104,6 @@ void print_title() {
     printf("------------------------------------------------\n");
 }
 
-void print_board(int board[3][3]) {
-    printf("    0   1   2\n");
-    for (int i = 0; i < 3; i++) {
-        printf("%d ", i);
-        for (int j = 0; j < 3; j++) {
-            
-            printf("| %c ", board[i][j]);
-        }
-        printf("| \n");
 
-    }
-    
-    
-}
 
-void clear_board(int board[3][3]) {
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            board[i][j] = SPACE;
-        }
-
-    }
-
-}

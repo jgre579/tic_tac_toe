@@ -1,4 +1,4 @@
-make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make.exe all -f C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.3
@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun 29 16:50:27 2022
+# Make data base, printed on Thu Jun 30 13:29:45 2022
 
 # Variables
 
@@ -23,13 +23,11 @@ LC_ALL = C
 # environment
 USERPROFILE = C:\Users\Jorda
 # environment
-LOCAL_GIT_DIRECTORY = C:\Users\Jorda\AppData\Local\GitHubDesktop\app-3.0.1\resources\app\git
-# environment
 LOCALAPPDATA = C:\Users\Jorda\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-784f2232-649b-4efb-9449-0f0b08cd2de9-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ccc3123f-6f2c-4f64-a63a-a65996f3146d-sock
 # environment
-VSCODE_CWD = C:\Users\Jorda\AppData\Local\GitHubDesktop\app-3.0.1
+VSCODE_CWD = C:\Users\Jorda\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -47,7 +45,7 @@ UGII_3DCONNEXION_DIR32 = C:\Program Files\3Dconnexion\3DxWare\3DxNX64\ugii_dir32
 # environment
 JUNIT_HOME = C:\JUnit
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8336_SJJWCPSUWLUXQCRJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10868_UHCXSZMGRJURKLQN
 # environment
 UGII_3DCONNEXION_DIR = C:\Program Files\3Dconnexion\3DxWare\3DxNX64\ugii_dir\
 # environment
@@ -85,7 +83,7 @@ CURDIR := c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -98,14 +96,14 @@ MFLAGS = -pqrR
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
 +D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 1)
+MAKEFILE_LIST := C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile
 # automatic
 @F = $(notdir $@)
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 8336
+VSCODE_PID = 10868
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -181,7 +179,7 @@ GNUMAKEFLAGS :=
 # environment
 OS = Windows_NT
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := link
 # default
 MAKE_VERSION := 4.3
 # environment
@@ -222,10 +220,6 @@ SUFFIXES :=
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -235,7 +229,7 @@ LXKSERVER = licensing-as.labcenter.com:8884/pcls/UniversityAuckland/
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=111/1024=11%, Rehash=0, Collisions=10/135=7%
+# Load=108/1024=11%, Rehash=0, Collisions=10/135=7%
 
 # Pattern-specific Variable Values
 
@@ -243,9 +237,8 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Jorda/OneDrive/Desktop/UoA2022/C/tic_tac_toe, mtime 1656478226): 8 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# No files, no impossibilities in 0 directories.
 
 # Implicit Rules
 
@@ -253,12 +246,19 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Files
 
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+ai_player.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 11):
+	gcc -c ai_player.c
+
+clear:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 14):
+	rm -f ai_player.o game_board.o main.o programName //this one is to delete files faster
 
 # Not a target:
 .DEFAULT:
@@ -273,42 +273,49 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit  
-rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+link: ai_player.o game_board.o main.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 2):
+	gcc ai_player.o game_board.o main.o -o programName
 
-# Not a target:
-makefile.mak:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 5):
+	gcc -c main.c
 
-# Not a target:
-GNUmakefile:
+game_board.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile', line 8):
+	gcc -c game_board.c
+
+# Not a t 
+arget:
+C:\Users\Jorda\OneDrive\Desktop\UoA2022\C\tic_tac_toe\makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-06-30 13:25:34
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/25=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 120 B / avg = 8 B
-# current buf: size = 8174 B / used = 120 B / count = 15 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 10 / storage = 131 B / avg = 13 B
+# current buf: size = 8174 B / used = 131 B / count = 10 / avg = 13 B
 
-# strcache performance: lookups = 18 / hit rate = 16%
+# strcache performance: lookups = 20 / hit rate = 50%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Wed Jun 29 16:50:27 2022
+# Load=10/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Thu Jun 30 13:29:45 2022
 
  

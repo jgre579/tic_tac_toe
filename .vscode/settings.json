@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "ai_player.h": "c"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\Jorda\\OneDrive\\Desktop\\UoA2022\\C\\tic_tac_toe",
+            "binaryPath": "c:\\Users\\Jorda\\OneDrive\\Desktop\\UoA2022\\C\\tic_tac_toe\\programName",
+            "binaryArgs": []
+        }
+    ]
+}
